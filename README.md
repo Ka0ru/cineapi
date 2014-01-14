@@ -2,21 +2,21 @@
 
 # Endpoints
 ```
-GET /v1/dogs
+GET /v1/films
 ```
 
 ```
-POST /v1/dogs
+POST /v1/films
 ```
 
 ```
-GET /v1/dogs/@id
+GET /v1/films/@id
 ```
 
 ```
-PUT /v1/dogs/@id
+PUT /v1/films/@id
 ```
 
 ```
-DELETE /v1/dogs/@id
+DELETE /v1/films/@id
 ```

@@ -1,17 +1,17 @@
 <?php
 
-class DogsController{
+class filmsController{
 
 	public function __construct(){
 	}
 
 	public function actionFind(){
-		Api::response(200, array('Get all dogs'));
+		Api::response(200, array('Get all films'));
 	}
 
 	public function actionCreate(){
 		if(isset($_POST['name'])){
-			$data = array('Create dog with name ' . $_POST['name']);
+			$data = array('Create film with name ' . $_POST['name']);
 			Api::response(200, $data);
 		}
 		else{
@@ -20,17 +20,17 @@ class DogsController{
 	}
 
 	public function actionFindOne(){
-		$data = array('Find one dog with name: ' . F3::get('PARAMS.id'));
+		$data = array('Find one film with name: ' . F3::get('PARAMS.id'));
 		Api::response(200, $data);
 	}
 
 	public function actionUpdate(){
-		$data = array('Update dog with name: ' . F3::get('PARAMS.id'));
+		$data = array('Update film with name: ' . F3::get('PARAMS.id'));
 		Api::response(200, $data);
 	}
 
 	public function actionDelete(){
-		$data = array('Delete dog with name: ' . F3::get('PARAMS.id'));
+		$data = array('Delete film with name: ' . F3::get('PARAMS.id'));
 		Api::response(200, $data);
 	}
 }
