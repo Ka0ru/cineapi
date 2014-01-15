@@ -1,15 +1,15 @@
 <?php
 
-class FilmsController{
+class UsersController{
 
 		private $model = null;
 
         public function __construct(){
-        		$this->model = new Films();
+        		$this->model = new Users();
         }
 
         public function actionFind(){
-        		$content = $this->model->listAllFilms();
+        		$content = $this->model->listAllUsers();
                 Api::response(200, $content);
         }
 
@@ -24,7 +24,7 @@ class FilmsController{
         }*/
 
         public function actionFindOne(){
-                $content = $this->model->searchFilms();
+                $content = $this->model->searchUsers();
                 Api::response(200, $content);
         }
 
@@ -45,4 +45,20 @@ class FilmsController{
                 $data = array('Delete film with name: ' . F3::get('PARAMS.id'));
                 Api::response(200, $data);
         }*/
+
+        public function actionListLikes(){
+        		$content = $this->model->listUserLikes();
+        		Api::response(200, $content);
+        }
+
+        public function actionListSeen(){
+        		$content = $this->model->listUserSeen();
+        		Api::response(200, $content);
+        }
+
+         public function actionListWouldLikeToSee(){
+        		$content = $this->model->listUserWouldLikeToSee();
+        		Api::response(200, $content);
+        }
+    
 }
